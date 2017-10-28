@@ -1,0 +1,30 @@
+ls
+rm main.go\~
+clear
+
+ls
+go build main.go 
+go build main.go
+clear
+
+ls
+./main 
+go build main.go
+./main
+./main main.go
+go build main.go
+clear
+
+go build main.go
+ls
+go build main.go
+go build main.go
+clear
+
+./main 
+go build main.go
+./main 
+exit
+make
+make
+exit
