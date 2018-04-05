@@ -7,6 +7,10 @@
 
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
                          ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+(setq frame-title-format
+      '("Deepin Emacs " " >_ " (:eval (if (buffer-file-name)
+                                          (abbreviate-file-name (buffer-file-name))
+                                        "%b"))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -18,7 +22,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (company-ycmd ycmd fzf monokai-theme evil go-autocomplete auto-complete exec-path-from-shell go-mode)))
+    (flycheck-ocaml tuareg company-ycmd ycmd fzf monokai-theme evil go-autocomplete auto-complete exec-path-from-shell go-mode)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -26,7 +30,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Liberation Mono" :foundry "nil" :slant normal :weight bold :height 181 :width normal)))))
+ '(default ((t (:family "IBM Plex Mono" :foundry "nil" :slant normal :weight light :height 180 :width normal)))))
 
 
 (defun set-exec-path-from-shell-PATH ()
@@ -81,7 +85,7 @@
 
 (define-key evil-normal-state-map (kbd "<backtab>") 'evil-prev-buffer)
 
-(load-theme 'monokai t)
+;;(load-theme 'monokai t)
 
 (setq c-default-style "linux"  
       c-basic-offset 4)  
